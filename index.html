@@ -6,19 +6,59 @@
     <meta charset="UTF-8">
     <title></title>
     <style>
+    .nav {
+  overflow: hidden;
+  background-color: #0b98de;
+}
+.nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: inline-block;
+  height: 100%;
+  width: 15%;
+}
+.nav a:hover {
+  background-color: #17b0cf;
+  color: black;
+}
+.nav a.active {
+  background-color:  #4CAF50;
+  color: white;
+}
+    body {
+    background-color: #e6e6e6;
+    }
     p {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
-    position: absolute;
-    left:20%;
+    position: relative;
+    top:-75px;
+    left:15%;
     }
     .main {
     font-family: 'Montserrat', sans-serif;
     font-size: 30px
     color: #000000;
+    position: relative;
+    top:-115px;
+    left:30%;   
+    }
+    div.button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px
+    display: relative;
+    top:350px;
+    left:300px;
+    }
+    div.random {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px
     position: absolute;
-    top:50px;
-    left:33%    
+    left: 50%;
     }
     #grad1 {
   height: 150px;
@@ -33,7 +73,24 @@
 <div id="grad1"></div>
 <h1 class="main">Random Games from the 20th century</h1>
 <p class="description">The decade is almost over and with it comes a time for nostalgia. That's why we brought you all of your favorite games from the 20th century </p>
+<div class="button"><button onclick="randomNum()">Click for a random game!</button></div>
+<p id="demo"></p>
+<div class="random">Each game has a number and so go to the game with the number that you got! </div>
+<div class="nav">
+  <a class="active" href="index.html">Home</a>
+  <a href="space.html">Space Invaders- 1 </a>
+  <a href="flappy.html">Flappy Bird- 2</a>
+  <a href="tetris.html">Tetris- 3</a>
+</nav>
+  <div style="padding-left:16px">
+</div>
 
+<script>
+function randomNum() {
+  var x = Math.floor((Math.random() * 3) + 1);
+  document.getElementById("demo").innerHTML = x
+}
+</script>
 </body>
 
 </html>
