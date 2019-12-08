@@ -26,11 +26,39 @@ canvas {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: optimize-contrast
 }
-
+.nav {
+  overflow: hidden;
+  background-color: #0b98de;
+}
+.nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: inline-block;
+  height: 100%;
+  width: 15%;
+}
+.nav a:hover {
+  background-color: #17b0cf;
+  color: black;
+}
+.nav a.active {
+  background-color:  #4CAF50;
+  color: white;
+}
     </style>
 </head>
 
 <body>
+<div class="nav">
+  <a href="index.html">Home</a>
+  <a class="active" href="space.html">Space Invaders- 1 </a>
+  <a href="flappy.html">Flappy Bird- 2</a>
+  <a href="tetris.html">Tetris- 3</a>
+</div>
 <link href='https://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
 <canvas id="game-canvas" width="640" height="640"></canvas>
 <script>/* Simple JavaScript Inheritance
